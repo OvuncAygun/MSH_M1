@@ -1,6 +1,6 @@
 #pragma once
 
-#include "IObserver.hpp"
+#include "Test/IObserver.hpp"
 #include "IDevice.hpp"
 
 #include <string>
@@ -8,7 +8,6 @@
 
 class IDeviceFactory {
 public:
-    IDeviceFactory();
     virtual ~IDeviceFactory() = 0;
 
     virtual IObserver* getObserver() = 0;

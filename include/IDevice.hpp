@@ -7,7 +7,6 @@
 
 class IDevice {
 public:
-    IDevice();
     virtual ~IDevice() = 0;
 
     virtual std::string getName() = 0;

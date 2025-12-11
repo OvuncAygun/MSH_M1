@@ -1,13 +1,31 @@
-cmake_minimum_required(VERSION 3.10.0)
-project(MSH_M1)
+cmake_minimum_required(VERSION 3.23)
+project(MSH_M1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(EXTERNAL_DIR ${CMAKE_CURRENT_SOURCE_DIR}/external)
+add_library(MSH_M1)
 
-add_executable(MSH_M1
-    src/main.cpp
+target_include_directories(MSH_M1 PRIVATE
+    include
+    include/Test
+    src
+    src/adapters
+    src/devices
+    src/factories
+    src/strategies
+)
+
+target_sources(MSH_M1
+    PRIVATE
+        src/MSH_M1.cpp
+    
+    PUBLIC
+        include/DeviceType.hpp
+        include/IDevice.hpp
+        include/IDeviceFactory.hpp
+        include/IProductFamilyFactory.hpp
+        include/MSH_M1.hpp
 )
 
 include(CTest)

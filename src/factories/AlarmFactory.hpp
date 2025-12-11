@@ -4,6 +4,6 @@
 
 class AlarmFactory : public DeviceFactory {
 public:
-    AlarmFactory();
-    ~AlarmFactory();
+    AlarmFactory() = default;
+    ~AlarmFactory() = default;
 };

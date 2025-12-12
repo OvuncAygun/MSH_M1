@@ -9,9 +9,10 @@ add_library(MSH_M1)
 target_include_directories(MSH_M1
     PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}/include
+        include/Test
     
     PRIVATE
-        include/Test
+        
         src
         src/adapters
         src/devices
@@ -30,6 +31,8 @@ target_sources(MSH_M1
     PRIVATE
         src/MSH_M1.cpp
 )
+
+add_library(MSH_M1::MSH_M1 ALIAS MSH_M1)
 
 include(CTest)
 enable_testing()

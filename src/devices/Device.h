@@ -1,9 +1,9 @@
 #pragma once
 
-#include "IDevice.hpp"
-#include "PowerStrategy.hpp"
-#include "DetectorStrategy.hpp"
-#include "IObserver.hpp"
+#include "IDevice.h"
+#include "PowerStrategy.h"
+#include "DetectorStrategy.h"
+#include "IObserver.h"
 
 class Device : public IDevice {
 public:

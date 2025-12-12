@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.23)
+cmake_minimum_required(VERSION 3.10)
 project(MSH_M1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -21,11 +21,11 @@ target_sources(MSH_M1
         src/MSH_M1.cpp
     
     PUBLIC
-        include/DeviceType.hpp
-        include/IDevice.hpp
-        include/IDeviceFactory.hpp
-        include/IProductFamilyFactory.hpp
-        include/MSH_M1.hpp
+        include/DeviceType.h
+        include/IDevice.h
+        include/IDeviceFactory.h
+        include/IProductFamilyFactory.h
+        include/MSH_M1.h
 )
 
 include(CTest)

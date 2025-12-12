@@ -1,6 +1,6 @@
 #pragma once
 
-#include "PowerStrategy.hpp"
+#include "PowerStrategy.h"
 
 class Nontoggleable : public PowerStrategy {
 public:

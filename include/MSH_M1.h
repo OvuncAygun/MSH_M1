@@ -1,8 +1,8 @@
 #pragma once
 
-#include "IDevice.hpp"
-#include "IDeviceFactory.hpp"
-#include "IProductFamilyFactory.hpp"
+#include "IDevice.h"
+#include "IDeviceFactory.h"
+#include "IProductFamilyFactory.h"
 
 #include <vector>
 

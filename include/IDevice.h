@@ -1,6 +1,6 @@
 #pragma once
 
-#include "DeviceType.hpp"
+#include "DeviceType.h"
 
 #include <string>
 #include <vector>

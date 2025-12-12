@@ -1,6 +1,6 @@
 #pragma once
 
-#include "ChineseLight.hpp"
+#include "ChineseLight.h"
 
 class LightAdapter {
 public:

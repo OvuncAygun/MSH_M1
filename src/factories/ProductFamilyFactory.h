@@ -1,6 +1,6 @@
 #pragma once
 
-#include "IProductFamilyFactory.hpp"
+#include "IProductFamilyFactory.h"
 
 class ProductFamilyFactory : public IProductFamilyFactory {
 public:

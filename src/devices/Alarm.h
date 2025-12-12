@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Device.hpp"
+#include "Device.h"
 
 class Alarm : public Device {
     Alarm();

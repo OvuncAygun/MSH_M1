@@ -1,6 +1,6 @@
 #pragma once
 
-#include "IDeviceFactory.hpp"
+#include "IDeviceFactory.h"
 
 class DeviceFactory : public IDeviceFactory {
 public:

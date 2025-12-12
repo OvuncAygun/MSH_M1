@@ -1,6 +1,6 @@
 #pragma once
 
-#include "DetectorStrategy.hpp"
+#include "DetectorStrategy.h"
 
 class Nondetecting : public DetectorStrategy {
 public:

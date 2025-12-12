@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Device.hpp"
+#include "Device.h"
 
 class TV : public Device {
     TV();

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Test/IObserver.hpp"
-#include "IDevice.hpp"
+#include "Test/IObserver.h"
+#include "IDevice.h"
 
 #include <string>
 #include <vector>

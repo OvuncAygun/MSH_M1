@@ -6,26 +6,29 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_library(MSH_M1)
 
-target_include_directories(MSH_M1 PRIVATE
-    include
-    include/Test
-    src
-    src/adapters
-    src/devices
-    src/factories
-    src/strategies
+target_include_directories(MSH_M1
+    PUBLIC
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
+    
+    PRIVATE
+        include/Test
+        src
+        src/adapters
+        src/devices
+        src/factories
+        src/strategies
 )
 
 target_sources(MSH_M1
+    PUBLIC
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/DeviceType.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/IDevice.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/IDeviceFactory.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/IProductFamilyFactory.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/MSH_M1.h
+    
     PRIVATE
         src/MSH_M1.cpp
-    
-    PUBLIC
-        include/DeviceType.h
-        include/IDevice.h
-        include/IDeviceFactory.h
-        include/IProductFamilyFactory.h
-        include/MSH_M1.h
 )
 
 include(CTest)

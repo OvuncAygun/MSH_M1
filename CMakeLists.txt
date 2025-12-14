@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 project(MSH_M1 LANGUAGES CXX)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 98)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_library(MSH_M1)
@@ -9,7 +9,7 @@ add_library(MSH_M1)
 target_include_directories(MSH_M1
     PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}/include
-        include/Test
+        ${CMAKE_CURRENT_SOURCE_DIR}/external
     
     PRIVATE
         
@@ -30,6 +30,7 @@ target_sources(MSH_M1
     
     PRIVATE
         src/MSH_M1.cpp
+
 )
 
 include(CTest)

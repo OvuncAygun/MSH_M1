@@ -13,6 +13,8 @@ public:
     void poweron();
     void poweroff();
 
+    bool getPowerState();
+
 private:
     ChineseLight* adaptee;
 };

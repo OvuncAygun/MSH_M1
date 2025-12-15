@@ -5,10 +5,7 @@ public:
     ChineseLight();
     ~ChineseLight();
 
-    void turnOn();
-    void turnOff();
-
-private:
+    bool turnOn();
+    bool turnOff();
     bool toggleState;
-
 };

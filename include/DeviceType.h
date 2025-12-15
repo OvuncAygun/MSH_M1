@@ -9,4 +9,3 @@ enum DeviceType {
     SmokeDetector,
     GasDetector
 };
-

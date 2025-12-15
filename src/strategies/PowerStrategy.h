@@ -5,6 +5,6 @@ public:
     PowerStrategy();
     virtual ~PowerStrategy() = 0;
 
-    virtual void poweron() = 0;
-    virtual void poweroff() = 0;
+    virtual void poweron(bool* powerState) = 0;
+    virtual void poweroff(bool* powerState) = 0;
 };

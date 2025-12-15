@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Test/IObserver.h"
+#include "IObserver.h"
 #include "IDevice.h"
 
 #include <string>

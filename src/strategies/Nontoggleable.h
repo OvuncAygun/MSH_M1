@@ -7,6 +7,6 @@ public:
     Nontoggleable();
     ~Nontoggleable();
 
-    void poweron() override;
-    void poweroff() override;
+    void poweron(bool* powerState) override;
+    void poweroff(bool* powerState) override;
 };

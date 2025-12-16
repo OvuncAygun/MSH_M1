@@ -11,17 +11,20 @@ IDevice* TVFactory::createDevice(std::string name, std::vector<std::string> conf
     tv->setName(name);
     tv->setConfig(config);
     tv->setDeviceType(DeviceType::TYPE_TV);
+    tv->setObserver(this->getObserver());
     tv->setPowerStrategy(new Toggleable());
     tv->setDetectorStrategy(new Nondetecting());
     return tv;
 };
 
 IDevice* TVFactory::cloneDevice(IDevice* source) {
+    Device* sourceDevice = static_cast<Device*>(source);
     TV* tv = new TV();
-    tv->setName(source->getName());
-    tv->setConfig(source->getConfig());
-    tv->setDeviceType(source->getDeviceType());
-    tv->setPowerStrategy(new Toggleable());
-    tv->setDetectorStrategy(new Nondetecting());
+    tv->setName(sourceDevice->getName());
+    tv->setConfig(sourceDevice->getConfig());
+    tv->setDeviceType(sourceDevice->getDeviceType());
+    tv->setObserver(sourceDevice->getObserver());
+    tv->setPowerStrategy(sourceDevice->getPowerStrategy());
+    tv->setDetectorStrategy(sourceDevice->getDetectorStrategy());
     return tv;
 }

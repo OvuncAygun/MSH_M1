@@ -7,6 +7,9 @@ public:
     ProductFamilyFactory();
     ~ProductFamilyFactory();
 
+    IObserver* getObserver() override;
+    void setObserver(IObserver* observer) override;
+
 protected:
     IObserver* observer;
     

@@ -7,7 +7,11 @@ public:
     DetectorFactory();
     ~DetectorFactory();
 
+    std::vector<IDevice*> createDevices(std::vector<std::string> name,
+        std::vector<std::vector<std::string>> config) override;
+    std::vector<IDevice*> cloneDevice(std::vector<IDevice*> sources) override;
+
 private:
-    void createSmokeDetector(std::string name, std::vector<std::string> config);
-    void createGasDetector(std::string name, std::vector<std::string> config);
+    IDevice* createSmokeDetector(std::string name, std::vector<std::string> config);
+    IDevice* createGasDetector(std::string name, std::vector<std::string> config);
 };

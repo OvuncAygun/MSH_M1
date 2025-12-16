@@ -53,6 +53,8 @@ target_sources(MSH_M1
         src/factories/LightFactory.cpp
         src/factories/MusicFactory.cpp
         src/factories/TVFactory.cpp
+        src/factories/ProductFamilyFactory.cpp
+        src/factories/DetectorFactory.cpp
 
 )
 

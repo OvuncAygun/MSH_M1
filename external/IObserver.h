@@ -1,5 +1,7 @@
 #pragma once
 
+#include "IDevice.h"
+
 class IObserver {
 public:
     virtual ~IObserver() = 0;

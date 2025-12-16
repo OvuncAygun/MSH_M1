@@ -6,4 +6,7 @@ class CameraFactory : public DeviceFactory {
 public:
     CameraFactory();
     ~CameraFactory();
+
+    IDevice* createDevice(std::string name, std::vector<std::string> config) override;
+    IDevice* cloneDevice(IDevice* source) override;
 };

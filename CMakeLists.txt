@@ -12,12 +12,11 @@ target_include_directories(MSH_M1
         ${CMAKE_CURRENT_SOURCE_DIR}/external
     
     PRIVATE
-        
-        src
-        src/adapters
-        src/devices
-        src/factories
-        src/strategies
+        ${CMAKE_CURRENT_SOURCE_DIR}/src
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/adapters
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/devices
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/strategies
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/factories
 )
 
 target_sources(MSH_M1
@@ -30,6 +29,30 @@ target_sources(MSH_M1
     
     PRIVATE
         src/MSH_M1.cpp
+
+        src/adapters/ChineseLight.cpp
+        src/adapters/LightAdapter.cpp
+
+        src/strategies/Toggleable.cpp
+        src/strategies/Nontoggleable.cpp
+        src/strategies/Detecting.cpp
+        src/strategies/Nondetecting.cpp
+
+        src/devices/Device.cpp
+        src/devices/Alarm.cpp
+        src/devices/Camera.cpp
+        src/devices/GasDetector.cpp
+        src/devices/Light.cpp
+        src/devices/Music.cpp
+        src/devices/SmokeDetector.cpp
+        src/devices/TV.cpp
+
+        src/factories/DeviceFactory.cpp
+        src/factories/AlarmFactory.cpp
+        src/factories/CameraFactory.cpp
+        src/factories/LightFactory.cpp
+        src/factories/MusicFactory.cpp
+        src/factories/TVFactory.cpp
 
 )
 

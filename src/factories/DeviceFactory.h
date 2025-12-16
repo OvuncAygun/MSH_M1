@@ -7,6 +7,9 @@ public:
     DeviceFactory();
     ~DeviceFactory();
 
+    IObserver* getObserver() override;
+    void setObserver(IObserver* observer) override;
+
 protected:
     IObserver* observer;
 };

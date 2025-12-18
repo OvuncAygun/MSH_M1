@@ -9,9 +9,9 @@ add_library(MSH_M1)
 target_include_directories(MSH_M1
     PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/external
     
     PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/external
         ${CMAKE_CURRENT_SOURCE_DIR}/src
         ${CMAKE_CURRENT_SOURCE_DIR}/src/adapters
         ${CMAKE_CURRENT_SOURCE_DIR}/src/devices

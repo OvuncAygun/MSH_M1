@@ -6,17 +6,20 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_library(MSH_M1)
 
-add_library(EXTERNAL INTERFACE)
-
-target_include_directories(EXTERNAL
-    INTERFACE
-        ${CMAKE_CURRENT_SOURCE_DIR}/external
-)
+if(TARGET MSH_M5)
+    target_link_libraries(MSH_M1 PUBLIC MSH_M5)
+else()
+    add_library(EXTERNAL INTERFACE)
+    target_include_directories(EXTERNAL
+        INTERFACE
+            ${CMAKE_CURRENT_SOURCE_DIR}/external
+    )
+    target_link_libraries(MSH_M1 PUBLIC EXTERNAL)
+endif()
 
 target_include_directories(MSH_M1
     PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}/include
-        EXTERNAL
     
     PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/src

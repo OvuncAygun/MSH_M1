@@ -2,8 +2,8 @@
 
 class DetectorStrategy {
 public:
-    DetectorStrategy();
-    virtual ~DetectorStrategy() = 0;
+    DetectorStrategy() {};
+    virtual ~DetectorStrategy() {};
 
     virtual void detect() = 0;
 };

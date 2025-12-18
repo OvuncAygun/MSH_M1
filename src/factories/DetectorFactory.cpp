@@ -37,7 +37,7 @@ std::vector<IDevice*> DetectorFactory::createDevices(std::vector<std::string> na
     return devices;
 }
 
-std::vector<IDevice*> DetectorFactory::cloneDevice(std::vector<IDevice*> sources) {
+std::vector<IDevice*> DetectorFactory::cloneDevices(std::vector<IDevice*> sources) {
     std::vector<IDevice*> devices;
     Device* sourceDevice1 = static_cast<Device*>(sources[0]);
     Device* device1 = new Device();

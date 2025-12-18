@@ -9,7 +9,7 @@ public:
 
     std::vector<IDevice*> createDevices(std::vector<std::string> name,
         std::vector<std::vector<std::string>> config) override;
-    std::vector<IDevice*> cloneDevice(std::vector<IDevice*> sources) override;
+    std::vector<IDevice*> cloneDevices(std::vector<IDevice*> sources) override;
 
 private:
     IDevice* createSmokeDetector(std::string name, std::vector<std::string> config);

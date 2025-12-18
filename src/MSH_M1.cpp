@@ -10,18 +10,35 @@
 MSH_M1::MSH_M1() = default;
 MSH_M1::~MSH_M1() = default;
 
+void MSH_M1::setObserver(IObserver* observer) {
+    this->observer = observer;
+}
+
+void MSH_M1::createFactories() {
+    deviceFactories.clear();
+    productFamilyFactories.clear();
+
+    deviceFactories.push_back(new AlarmFactory());
+    deviceFactories.push_back(new CameraFactory());
+    deviceFactories.push_back(new LightFactory());
+    deviceFactories.push_back(new MusicFactory());
+    deviceFactories.push_back(new TVFactory());
+
+    productFamilyFactories.push_back(new DetectorFactory());
+
+    for (IDeviceFactory* factory : deviceFactories) {
+        factory->setObserver(observer);
+    }
+
+    for (IProductFamilyFactory* factory : productFamilyFactories) {
+        factory->setObserver(observer);
+    }
+}
+
 std::vector<IDeviceFactory*> MSH_M1::getDeviceFactories() {
-    std::vector<IDeviceFactory*> factories;
-    factories.push_back(new AlarmFactory());
-    factories.push_back(new CameraFactory());
-    factories.push_back(new LightFactory());
-    factories.push_back(new MusicFactory());
-    factories.push_back(new TVFactory());
-    return factories;
+    return deviceFactories;
 }
 
 std::vector<IProductFamilyFactory*> MSH_M1::getProductFamilyFactories() {
-    std::vector<IProductFamilyFactory*> factories;
-    factories.push_back(new DetectorFactory());
-    return factories;
+    return productFamilyFactories;
 }

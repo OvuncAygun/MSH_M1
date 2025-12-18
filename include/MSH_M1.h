@@ -11,7 +11,14 @@ public:
     MSH_M1();
     ~MSH_M1();
 
+    void setObserver(IObserver* observer);
+    void createFactories();
+
     std::vector<IDeviceFactory*> getDeviceFactories();
     std::vector<IProductFamilyFactory*> getProductFamilyFactories();
 
+private:
+    IObserver* observer;
+    std::vector<IDeviceFactory*> deviceFactories;
+    std::vector<IProductFamilyFactory*> productFamilyFactories;
 };

@@ -6,8 +6,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_library(MSH_M1)
 
-target_link_libraries(MSH_M1 PUBLIC MSH_M5)
-
 target_include_directories(MSH_M1
     PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}/include
@@ -26,6 +24,7 @@ target_sources(MSH_M1
         ${CMAKE_CURRENT_SOURCE_DIR}/include/IDevice.h
         ${CMAKE_CURRENT_SOURCE_DIR}/include/IDeviceFactory.h
         ${CMAKE_CURRENT_SOURCE_DIR}/include/IProductFamilyFactory.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/IObserver.h
         ${CMAKE_CURRENT_SOURCE_DIR}/include/MSH_M1.h
     
     PRIVATE
